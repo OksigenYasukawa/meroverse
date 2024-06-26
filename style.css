@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(14,10,24);
+    background: linear-gradient(45deg, rgba(14,10,24,1) 0%, rgba(44,16,100,1) 100%);
+    background-repeat: no-repeat;
+    height: 100 vh;
+}
+
+.menu .container {
+    background-color: #F0E9FC;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2),
+               10px 10px 40px rgba(44, 16, 100, 0.4);
+}
+
+.menu a {
+    color: #0E0A18;
+    -webkit-transition: 1s; /* For Safari 3.1 to 6.0 */
+    transition: 1s;
+    border: 2px solid transparent;
+    border-radius: 0px !important;
+}
+
+.menu a.awal {
+    border: 2px solid transparent !important;
+}
+
+.menu a.awal:hover {
+    border: 2px solid transparent !important;    
+}
+
+.menu a:hover {
+    color: #0E0A18;    
+    border-bottom: 2px solid #0E0A18;
+}
+
+.menu .nav-link.active {
+    color: #0E0A18 !important; 
+    background-color: transparent !important;
+    border-bottom: 2px solid #0E0A18;
+    border-radius: 0px !important;
+}
+
+.papan {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; /* add this line */
+}
+
+.papan2 {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto; /* add this line */    
+}
+
+.kartu {
+    flex-grow: 1;
+    width: 20%;
+    border-radius: var(--bs-border-radius)!important;
+    padding: 20px;
+    background-color: #F0E9FC;
+}
+
+.kartu img {
+    aspect-ratio: 1 / 1;
+    height: 280px;
+}
+
+.kartu .h3 {    
+    font-family: "Bowlby One", sans-serif !important;
+}
+
+.papan2 p {    
+    font-family: "Bowlby One", sans-serif !important;
+    font-size: 50px;
+}
+
+.kartu:nth-child(2) {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.konten {
+    width: 100%;
+    max-width: 1536px;
+    margin-inline: auto;
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+@keyframes scrollLeft {
+    to {
+        left:-300px;
+    }
+}
+
+.item {
+    width: 300px;
+    height: 350px;
+    margin-top: 15px;
+    background-color: #F0E9FC;
+    border-radius: var(--bs-border-radius)!important;
+    position: absolute;
+    left: max(calc(280px * 8), 100%);
+    animation-name: scrollLeft;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.item img {
+    width: 250px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.item1 {
+    animation-delay: calc(30s / 8 * (8 - 1) * -1);
+}
+
+.item2 {
+    animation-delay: calc(30s / 8 * (8 - 2) * -1);
+}
+
+.item3 {
+    animation-delay: calc(30s / 8 * (8 - 3) * -1);
+}
+
+.item4 {
+    animation-delay: calc(30s / 8 * (8 - 4) * -1);
+}
+
+.item5 {
+    animation-delay: calc(30s / 8 * (8 - 5) * -1);
+}
+
+.item6 {
+    animation-delay: calc(30s / 8 * (8 - 6) * -1);
+}
+
+.item7 {
+    animation-delay: calc(30s / 8 * (8 - 7) * -1);
+}
+
+.item8 {
+    animation-delay: calc(30s / 8 * (8 - 8) * -1);
+}
+
+.style {
+    font-family: "Bowlby One", sans-serif !important;
+}
+
+.papan2 .tengah {
+    margin: 0 auto;
+}
