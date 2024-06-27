@@ -169,6 +169,6 @@ body {
 }
 
 ::selection {
-    color: #F0E9FC;
-    background: linear-gradient(45deg, rgba(14,10,24,1) 0%, rgba(44,16,100,1) 100%);
+    color: #F0E9FC !important;
+    background: linear-gradient(45deg, rgba(14,10,24,1) 0%, rgba(44,16,100,1) 100%) !important;
   }
