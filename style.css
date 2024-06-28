@@ -47,6 +47,11 @@ body {
     border-radius: 0px !important;
 }
 
+.papan0 {    
+    max-width: 1320px;
+    margin: 0 auto; /* add this line */
+}
+
 .papan {
     display: flex;
     flex-wrap: wrap;
@@ -91,7 +96,7 @@ body {
 }
 
 .konten {
-    width: 100%;
+    width: calc(100%);
     max-width: 1536px;
     margin-inline: auto;
     position: relative;
@@ -172,3 +177,239 @@ body {
     color: #F0E9FC !important;
     background: linear-gradient(45deg, rgba(14,10,24,1) 0%, rgba(44,16,100,1) 100%) !important;
   }
+
+.carousel-item img {
+    height: 400px;
+    object-fit: contain;
+}
+
+.carousel-item h1, .carousel-item p {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-inner {
+    height: 400px;
+}
+
+#fragment, #mcrp, #admin {
+    height: 50px !important;
+}
+.list {
+    flex-grow: 1;
+    width: 25%;
+    border-radius: var(--bs-border-radius)!important;
+    padding: 20px;
+    background-color: #F0E9FC;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.list img {
+    aspect-ratio: 1 / 1;
+    width: 20%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.list .hh {    
+    width: calc(80% - 10px);
+    line-height: 50px !important;
+    font-size: 20px;
+    font-weight: 600;
+    align-items: center;
+    margin: 0;
+    margin-left: 10px;
+}
+
+.list:nth-child(2), .list:nth-child(5) {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.list .tag1 {
+    display: block !important;
+    width: max-content;
+    margin-left: 70px;
+    background-color: #212529;
+    color: #F0E9FC;
+    margin-bottom: 2px;
+    border-radius: var(--bs-border-radius)!important;
+    padding: 1px 5px ;
+    padding-left: 25px;
+    position: relative;
+}
+
+.list .tag1::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ff0000;
+    margin: 5px;
+}
+
+.list .tag2 {
+    display: block !important;
+    width: max-content;
+    margin-left: 70px;
+    background-color: #212529;
+    color: #F0E9FC;
+    margin-bottom: 2px;
+    border-radius: var(--bs-border-radius)!important;
+    padding: 1px 5px ;
+    padding-left: 25px;
+    position: relative;
+}
+
+.list .tag2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ffb700;
+    margin: 5px ;
+}
+
+.list .tag0 {
+    display: block !important;
+    width: max-content;
+    margin-left: 70px;
+    background-color: #212529;
+    color: #F0E9FC;
+    margin-bottom: 2px;
+    border-radius: var(--bs-border-radius)!important;
+    padding: 1px 5px ;
+    padding-left: 25px;
+    position: relative;
+    opacity: 0;
+}
+
+.list .tag0::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ffb700;
+    margin: 5px ;
+}
+
+
+
+
+
+
+.popup .overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    z-index:1;
+    display: none;
+    animation: fadeIn 300ms ease-in; 
+}
+
+.popup .content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background: #fff;
+    width: 600px;
+    height: 400px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;  
+    animation: fadeOut 300ms ease-in; 
+    display:none;
+}
+
+  
+
+@keyframes fadeOut {  
+from {  
+    opacity:1;  
+}  
+
+to {  
+    opacity:0;  
+}  
+}
+
+@keyframes fadeIn {  
+from {  
+    opacity:0;  
+}  
+
+to {  
+    opacity:1;  
+}  
+}
+
+.popup .close-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: #222;
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.popup.active .overlay {
+display: block;
+animation: fadeIn 300ms ease-in; 
+}
+
+.popup.active .content, .popup.active .content2  {
+transition: all 300ms ease-in-out;
+animation: fadeIn 300ms ease-in; 
+transform: translate(-50%, -50%) scale(1);
+opacity: 1;  
+display:block;
+}
+  
+.open-btn {
+background-color: transparent;
+border: 0;
+color:black !important;
+text-decoration: none;
+cursor: pointer;
+font-size: 15px;
+font-weight: bold;
+}
+  
+.popup .p1 {
+    font-size: xx-large;
+    font-weight: 600;
+  }
+  
+.popup .p2 {
+margin-top: 20px;
+font-size:18px;
+text-align: left !important;
+line-height: 1.6;
+}
+
+.popup .p2 a {
+margin-top: 20px;
+font-size:18px;
+color: #000000;
+}
